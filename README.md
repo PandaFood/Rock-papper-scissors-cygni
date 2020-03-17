@@ -8,59 +8,48 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+You need ```Node.js``` and ```npm``` installed to run this project.
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+To install all depencencies, run
 
 ```
-Give the example
+npm install
 ```
 
-And repeat
-
+## Running the program
+After installing the prerequisites, you can start the program with
 ```
-until finished
+npm start
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+### Usage
+After its started, you can talk to the program using http as defined in the [specification](/docs/specifications.pdf), with any program, such as
+#### postman
+POST to ```localhost:3000/api/games/``` with example body
+``` 
+{
+	"name": "Jonathan"
+}
+```
+
+#### powershell
+Using the same example as above with powershell, in a terminal, write
+```
+curl -Method Post -Body '{ "name": "Jonathan" }' http://localhost:3000/api/games/
+```
 
 ## Running the tests
 
 To run all the tests, run the command `npm test`
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Express](https://expressjs.com/) - The web framework
+* [Chai](https://www.chaijs.com/) - The test framework
+* [npm](https://www.npmjs.com/) - Dependency Management
+
 
 ## Acknowledgments
 
