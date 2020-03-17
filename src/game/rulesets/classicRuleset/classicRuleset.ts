@@ -1,7 +1,9 @@
-import { Type } from "../../../models/type"
+import { Type } from "../../models/type"
 import { Ruleset } from "../ruleset";
 
-export class classicRuleset implements Ruleset {
+export class ClassicRuleset implements Ruleset {
+
+
 
     rock: Type = {
         name: "rock",
@@ -15,14 +17,15 @@ export class classicRuleset implements Ruleset {
         name: "scissor",
         weakAgainst: []
     }
-    
+
     constructor() {
         this.rock.weakAgainst = [this.paper];
         this.paper.weakAgainst = [this.scissor];
         this.scissor.weakAgainst = [this.rock];
     }
-
     
+
+
 
 }
     

@@ -3,22 +3,38 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "npm run tsc && node ./dist/app",
+    "start": "node --inspect=5858 -r ts-node/register ./src/app.ts",
+    "start:watch": "nodemon",
     "test": "mocha -r ts-node/register src/**/*.spec.ts",
-    "tsc": "tsc"
-
+    "build": "tsc"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts", 
+      "**/*.spec.ts", 
+      ".git", 
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "npm start",
+    "ext": "ts"
   },
   "dependencies": {
     "@types/chai": "^4.2.11",
     "@types/express": "^4.17.3",
     "@types/mocha": "^7.0.2",
     "@types/morgan": "^1.9.0",
+    "@types/uuid": "^7.0.0",
     "chai": "^4.2.0",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "mocha": "^7.1.0",
     "morgan": "~1.9.1",
+    "nodemon": "^2.0.2",
     "ts-node": "^8.6.2",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "uuid": "^7.0.2"
   }
 }
