@@ -38,9 +38,13 @@ POST to ```localhost:3000/api/games/``` with example body
 ```
 
 #### powershell
-Using the same example as above with powershell, in a terminal, write
 ```
-curl -Method Post -Body '{ "name": "Jonathan" }' http://localhost:3000/api/games/
+Invoke-WebRequest -Method Post -ContentType "application/json" -Body '{ "name": "Jonathan" }' http://localhost:3000/api/games/
+```
+
+#### cURL
+```
+curl -X POST -H "Content-Type: application/json" -d '{"name":"Jonathan"}' http://localhost:3000/api/games/
 ```
 
 ## Running the tests
