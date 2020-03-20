@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node --inspect=5858 -r ts-node/register ./src/app.ts",
+    "start": "node --inspect=5858 -r ts-node/register src/app.ts",
     "start:watch": "nodemon",
     "test": "mocha -r ts-node/register src/**/*.spec.ts",
     "build": "tsc"

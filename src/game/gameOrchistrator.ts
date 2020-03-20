@@ -1,7 +1,6 @@
 import { Game } from "./game";
 import { Player } from './models/player';
-import { GameState } from './state/gameState';
-import { GameStore } from "./store/gameStore";
+import { GameStore } from "./models/gameStore";
 import NoGameFoundException from "../exceptions/NoGameFoundException";
 import { response } from "express";
 
@@ -36,10 +35,15 @@ export class GameOrchistrator {
         });
     }
 
-    async registerMove(gameID: string, player: Player){
-        this.getGame(gameID).then( (game) => {
-            
-        })
+    async registerMove(gameID: string, player: Player, move: string){
+        return new Promise((resolve, reject) => {
+            this.getGame(gameID).then( (game) => {
+                game.makeMove(player, move);
+                resolve();
+            }).catch(error => {
+                reject(error)
+            });
+        });
     }
 
     async getGame(gameID: string): Promise<Game> {

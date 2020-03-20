@@ -1,6 +1,9 @@
-# Rock Paper Scissors Cygni Hemtest
+# Rock Paper Scissors Cygni Home Assignment
 
-Hemtestet från cygni. Gjord av Jonathan Brorsson
+Home assignment from cygni. By Jonathan Brorsson
+
+[Specification](/docs/specifications.pdf)
+
 
 ## Getting Started
 
@@ -25,7 +28,7 @@ npm start
 ```
 
 ### Usage
-After its started, you can talk to the program using http as defined in the [specification](/docs/specifications.pdf), with any program, such as
+After its started, you can talk to the program using http as specified in the [api documentation](/docs/api.md), with any program, such as
 #### postman
 POST to ```localhost:3000/api/games/``` with example body
 ``` 

@@ -1,12 +1,12 @@
 import Exception from "./Exception";
 
-export default class GameAlreadyFullException extends Exception {
+export default class NoSuchMoveExistsException extends Exception {
     constructor() {
-      super(400, "The game is already full");
+      super(400, "No such move exists");
 
       // Enables the exception type to be found
       Object.setPrototypeOf(this, new.target.prototype);
-      this.name = GameAlreadyFullException.name; 
+      this.name = NoSuchMoveExistsException.name; 
     }
   }
    

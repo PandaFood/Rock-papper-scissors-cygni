@@ -1,4 +1,4 @@
-import { GameStore } from "../gameStore";
+import { GameStore } from "../../models/gameStore";
 import { Game } from "game/game";
 import NoGameFoundException from "../../../exceptions/NoGameFoundException";
 
@@ -17,10 +17,6 @@ export class InMemoryStore implements GameStore {
 
     add(game: Game) {
         this.gameList.push(game);
-    }
-
-    remove(gameID: string) {
-        
     }
 
     private findGame(gameID: string){
