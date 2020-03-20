@@ -53,10 +53,3 @@ To run all the tests, run the command `npm test`
 * [Chai](https://www.chaijs.com/) - The test framework
 * [npm](https://www.npmjs.com/) - Dependency Management
 
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
