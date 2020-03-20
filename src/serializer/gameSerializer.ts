@@ -1,7 +1,4 @@
 import { Game } from "game/game"
-import { Player } from "game/models/player";
-
-
 
 export default function serializeGame(game: Game) {
 
@@ -12,7 +9,6 @@ export default function serializeGame(game: Game) {
     let moveset = game.moveset.getName();
 
     let winner = game.getResult();
-
 
     return {
         "gameID": gameID,

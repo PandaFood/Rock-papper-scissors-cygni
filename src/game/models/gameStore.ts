@@ -1,5 +1,4 @@
 import { Game } from "game/game";
-import NoGameFoundException from "../../exceptions/NoGameFoundException";
 
 export interface GameStore {
     

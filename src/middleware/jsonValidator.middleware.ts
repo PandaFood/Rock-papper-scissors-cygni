@@ -1,6 +1,4 @@
 import { NextFunction, Request, Response } from 'express';
-import NoGameFoundException from '../exceptions/NoGameFoundException';
-import Exception from 'exceptions/Exception';
 import MalformedJSONException from '../exceptions/MalformedJSONException';
 
 export default class JSONValidatorMiddleware {

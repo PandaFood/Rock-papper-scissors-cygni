@@ -3,7 +3,6 @@ import 'mocha';
 import {Game} from './game';
 import {Player} from './models/player';
 import {ClassicMoveset} from './moveset/classicMoveset/classicMoveset';
-import GameAlreadyFullException from '../exceptions/GameAlreadyFullException';
 
 
 describe('Game class', () => {

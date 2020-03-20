@@ -1,8 +1,6 @@
 import { Game } from "./game";
 import { Player } from './models/player';
 import { GameStore } from "./models/gameStore";
-import NoGameFoundException from "../exceptions/NoGameFoundException";
-import { response } from "express";
 
 export class GameOrchistrator {
 
