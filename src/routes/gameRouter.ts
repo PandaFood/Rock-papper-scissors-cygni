@@ -11,7 +11,7 @@ const gameStore = new InMemoryStore();
 const gameOrchistrator = new GameOrchistrator(gameStore);
 const jv = new JSONValidatorMiddleware();
 
-router.post('/', jv.requireUsername, function(req: express.Request, res: express.Response, next: express.NextFunction) {
+router.post('/', jv.name, function(req: express.Request, res: express.Response, next: express.NextFunction) {
   let player: Player =  {
     name: req.body.name
   } 
@@ -27,7 +27,7 @@ router.post('/', jv.requireUsername, function(req: express.Request, res: express
     });
 });
 
-router.post('/:id/join', function(req: express.Request, res: express.Response, next: express.NextFunction) {
+router.post('/:id/join', jv.name, function(req: express.Request, res: express.Response, next: express.NextFunction) {
   let player: Player =  {
     name: req.body.name
   } 
@@ -42,7 +42,7 @@ router.post('/:id/join', function(req: express.Request, res: express.Response, n
     });
 });
 
-router.post('/:id/move', function(req: express.Request, res: express.Response, next: express.NextFunction) {
+router.post('/:id/move', jv.name, jv.move, function(req: express.Request, res: express.Response, next: express.NextFunction) {
   let player: Player =  {
     name: req.body.name,
   }

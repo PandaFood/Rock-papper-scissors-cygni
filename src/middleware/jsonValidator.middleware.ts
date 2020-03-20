@@ -5,21 +5,24 @@ import MalformedJSONException from '../exceptions/MalformedJSONException';
 
 export default class JSONValidatorMiddleware {
     
-    requireUsername(error: Exception, request: Request, response: Response, next: NextFunction){
-        let name = request.body.name
+    name(request: Request, response: Response, next: NextFunction){
+        let field = request.body.name;
 
-        console.log(name);
-        if(name){
-            throw new MalformedJSONException("Missing name");
+        if(typeof(field) === "string"){
+            next();
+        } else {
+            throw new MalformedJSONException("Missing name field");
         }
-
-        next();
     }
 
-    requireUsernameAndMove(error: Exception, request: Request, response: Response, next: NextFunction){
-
+    move(request: Request, response: Response, next: NextFunction){
+        let field = request.body.move;
         
-        next();
+        if(typeof(field) === "string"){
+            next();
+        } else {
+            throw new MalformedJSONException("Missing name field");
+        }
     }
 
 }
