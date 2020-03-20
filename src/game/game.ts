@@ -23,17 +23,17 @@ export class Game {
         this.moveset = moveset ? moveset : this.moveset;
     }
 
-    getResult(): string {
+    getResult(): Player | undefined {
         if(this.creator.move && this.opponent?.move){
             let result = this.returnWinner(this.creator, this.opponent)
 
             if(result){
-                return result.name;
+                return result;
             } else {
-                return "TIE"
+                return {name: "Draw"};
             }
         } else {
-            return "No winner yet";
+            return;
         }
     }
 
