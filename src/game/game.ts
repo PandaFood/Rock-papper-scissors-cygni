@@ -91,8 +91,7 @@ export class Game {
     private matchPlayerToLocalPlayer(player: Player): Player {
         if(player.name == this.creator.name){
             return this.creator;
-        } else 
-        if(player.name == this.opponent?.name){
+        } else if(player.name == this.opponent?.name){
             return this.opponent;
         } else {
             throw new NoSuchPlayerExistException();

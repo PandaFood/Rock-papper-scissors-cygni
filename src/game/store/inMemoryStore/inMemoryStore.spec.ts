@@ -9,12 +9,9 @@ import NoGameFoundException from '../../../exceptions/NoGameFoundException';
 describe('InMemoryStore class', () => {
 
     describe('Create an InMemoryStore', () => {
-
         let store = new InMemoryStore();
         let player : Player = {"name": "John"};
-
         let game = new Game(player);
-
         let result;
 
         it('should be able to store a game', () => {
@@ -32,7 +29,5 @@ describe('InMemoryStore class', () => {
             // The anonymous function is needed because of typescripts transpiling.
             expect(() => {store.get('not an id')}).to.throw(NoGameFoundException);
         });
-
     });
-
 });

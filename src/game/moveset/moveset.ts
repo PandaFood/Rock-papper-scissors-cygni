@@ -13,13 +13,14 @@ export abstract class Moveset {
     }
 
     isValidMove(name: string): boolean {
-        let currentMove = this.getMove(name)
+        try {
+            let currentMove = this.getMove(name)
 
-        if(currentMove) {
-            return true;
-        } else {
-            return false;
-        }
+            if(currentMove) {
+                return true;
+            }
+        } catch (error) {} // Catching the NoSuchMoveExistsException, unneccesary to return false here aswell.
+        return false;
     }
 
     getMove(name: string): Move {
