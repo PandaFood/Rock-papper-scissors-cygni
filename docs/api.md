@@ -12,18 +12,16 @@ An example response from a completed game.
 
 ```javascript
 {
-    "gameID": "3a42e2e5-bb70-449a-8f39-79017156750a",
-    "timeCreated": "2020-03-20T13:01:33.327Z",
+    "gameID": "0080fa58-4ece-4dfe-83a0-14c22ff2f451",
+    "timeCreated": "2020-03-22T11:49:11.453Z",
     "creator": {
-        "name": "Jonathan",
-        "move": "Scissor"
+        "name": "Johan"
     },
     "opponent": {
-        "name": "Per",
-        "move": "Paper"
+        "name": "Per"
     },
     "moveset": "Classic",
-    "winner": "Jonathan"
+    "winner": "The winner is Johan with Rock against Pers Scissor"
 }
 ```
 
